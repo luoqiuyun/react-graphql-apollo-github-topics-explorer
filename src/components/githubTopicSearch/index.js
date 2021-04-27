@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 
+import { DevDiv } from '../styledComponents/div'
 import SearchResult from './SearchResult'
 import SearchBar from './SearchBar'
 import Topic from './Topic'
@@ -14,14 +15,14 @@ const GithubTopicSearch = (props) => {
         search={search}
         onSearchChange={setSearch}
       />
-      <div className="luoqiuyun">
+      <DevDiv>
         <Topic search={search} />
         <SearchResult
           key={search}
           value={search}
           onSearchChange={setSearch} 
         />
-      </div>
+      </DevDiv>
     </div>
   )
 }
